@@ -5,7 +5,7 @@ const app = express();
 
 // 🔥 APIs
 const APIs = [
-  "https://ff-ez-bot1.onrender.com/join",
+  "https://ff-ez-bot.onrender.com/join",
   "https://ff-ez-bot2.onrender.com/join"
 ];
 
