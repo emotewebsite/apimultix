@@ -64,6 +64,8 @@ app.get("/", (req, res) => {
 // =========================
 app.get("/join", async (req, res) => {
   try {
+    console.log("JOIN HIT:", req.query); // 👈 add this
+
     let query = buildQuery(req.query);
 
     if (!query) {
@@ -73,12 +75,15 @@ app.get("/join", async (req, res) => {
     let api = getAPI();
     let url = api + "?" + query;
 
+    console.log("Forwarding to:", url); // 👈 add this
+
     let response = await fetch(url);
     let data = await response.text();
 
     res.send(data);
 
   } catch (err) {
+    console.error("ERROR:", err); // 👈 add this
     res.status(500).send("Error: " + err.message);
   }
 });
