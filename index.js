@@ -3,10 +3,9 @@ const fetch = require("node-fetch");
 
 const app = express();
 
-// 🔥 APIs
 const APIs = [
-  "https://ff-ez-bot.onrender.com/join",
-  "https://ff-ez-bot2.onrender.com/join"
+  process.env.API_1,
+  process.env.API_2
 ];
 
 // 🔥 round robin
