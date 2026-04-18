@@ -56,7 +56,9 @@ function buildQuery(q) {
 
   return params.toString();
 }
-
+app.get("/", (req, res) => {
+  res.send("Controller Alive");
+});
 // =========================
 // MAIN ROUTE
 // =========================
